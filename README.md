@@ -1,24 +1,24 @@
 # NHSCheckerTool
 
-Build and run code:
+## Build and run code: ##
 Go to "RunTest" .java class which is located under test > java> uk.Nhs.Nhsbsa.Services.Test > Runtest; You will see a green play button besides "public class Runtest {"; Click the play button; You will see a menu open with three options; Select the first option "Run runtest";
 
-To execute the tests in chrome or firefox:
+## To execute the tests in chrome or firefox: ##
 Go to NhsCostsCheckerTool\src\test\Resources\TestData\TestConfig.Properties
 Change name of the browser you like to use under "browser" key. You can run with firefox or chrome
 
-Dependencies:
+## Dependencies: ##
 You will see a pom.xml file. Here all the dependencies are located to enable to run the tests in the framework. I have used:
 
 Junit 4.11; selenium-api dependency version 3.141.59; selenium-support dependency version 3.141.59; selenium-java 2.39.0; selenium-chrome-driver version 3.141.59; selenium-ie-driver 3.141.59; selenium-firefox-driver 3.141.59; cucumber-core 1.2.5; cucumber-java 1.2.5; cucumber-junit 1.2.5;
 WebdriverManager dependency to efficiently make the framework lighter so that chromedriver.exe and geckodriver.exe files are not required
 
-Automation Tools and framework Specifications:
+## Automation Tools and framework Specifications: ##
 I have developed a BDD style framework using Page Object Model. In this framework, I have used:
 
 Java as a coding language; Selenium as an automation tool; Maven as a build tool to enable auto-downloading of dependencies; Gherkin language to enable writing feature files in Given, When, Then format; Cucumber to integrate BDD style framework using cucumberOptions; Junit for annotations such as @Before and @After; Page Object Model design in the framework to avoid duplication of code and efficient maintenance and refactoring of code;
 
-Exploring framework structure:
+## Exploring framework structure: ##
 I have used inheritance, one of the OOPS concepts of Java
 
 There are 2 sections in this framework, Main/Java and Test/Java
@@ -37,7 +37,7 @@ Loadproperties: This class has the logic to assign test data and browser names b
 
 PageObjects Package: This interface has Java .java files for every page user navigates to. These .java files have names relevant to the pages user is on and contains locators and methods for the user to perform some action. This will avoid duplication of code and the code will be easy to maintain and refactor as whenever there is any change to a feature on the page we change it in one place. It saves a lot of time and effort and also it is more readable for someone else reading the code. .java files in Page object extends BasePage to use the properties of BasePage
 
-The Test/Java section consists of 3 Java classes and a Directory
+## The Test/Java section consists of 3 Java classes and a Directory ##
 Java classes in Test/Java section
 
 Hooks: This class extends BasePage to use the properties of BasePage required. There are mainly 2 Junit annotations @Before and @After. @Before will execute the logic written in it before any feature files are executed. @After will execute the logic written in it after the completion of a feature file journey
